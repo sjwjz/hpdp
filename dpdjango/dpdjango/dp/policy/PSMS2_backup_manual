@@ -1,0 +1,26 @@
+DATALIST "PSMS2_backup_manual"
+DYNAMIC 1 5
+DEFAULTS
+{
+	FILESYSTEM
+	{
+
+	} 
+	RAWDISK
+	{
+
+	} 
+}
+
+DEVICE "HP:Ultrium 5-SCSI_23" 
+{
+	-pool "PSMS"
+	-mp_preferred_host "psms2"
+} 
+
+FILESYSTEM "/psms_js/balance/data_backup01" psms2:"/psms_js/balance/data_backup01"
+{
+	-trees
+		"/psms_js/balance/data_backup01/OFFLINE_BACKUP_DATA"
+} 
+

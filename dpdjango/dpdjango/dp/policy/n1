@@ -1,0 +1,24 @@
+DATALIST "n1"
+DYNAMIC 1 5
+DEFAULTS
+{
+	FILESYSTEM
+	{
+
+	} 
+	RAWDISK
+	{
+
+	} 
+}
+
+DEVICE "HP:Ultrium 3-SCSI_5" 
+{
+	-pool "N3_ESL_AUTO"
+	-mp_preferred_host "cbbssys2"
+} 
+
+FILESYSTEM "/oracle817" n1:"/oracle817"
+{
+} 
+

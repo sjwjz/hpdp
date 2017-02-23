@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>磁带出库</title>
+	<meta charset=utf-8>
+	<meta name=viewport content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="">
+</head>
+<body>
+	<table border="1"> 
+		<caption>可出库磁带</caption>
+		<thead>
+			<tr>
+				<th>选择</th>
+				<th>磁带条码</th>
+				<th>位置</th>
+				<th>磁带状态</th>
+				<th>保护周期</th>
+				<th>已使用（MB）</th>
+				<th>总容量（MB）</th>
+				<th>最后使用时间</th>
+				<th>pool</th>
+			</tr>
+		</thead>
+		<tbody>
+			<form action="outtape.html" method="post">
+			{% csrf_token %} 
+			<tr>
+			  	{% for barcode,tape in tapes.items %}
+				<tr>
+					<td><label><input name="tape" type="checkbox" value="{{ barcode }}" /></label></td>
+					{% for item in tape %}
+			   			<td>{{ item }}</td>	
+			    	{% endfor %} 
+			    <tr>
+			    {% endfor %} 
+			</tr>
+			<input type='submit' value='出库选中磁带'>
+	</form>
+	</tbody>
+	</table>
+	<!-- <form action="jianyichuku.html" method="get" accept-charset="utf-8">
+		<button>建议出库磁带</button>
+	</form> -->
+</body>
+</html>

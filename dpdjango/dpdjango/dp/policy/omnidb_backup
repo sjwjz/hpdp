@@ -1,0 +1,24 @@
+DATALIST "omnidb_backup"
+DYNAMIC 1 5
+DEFAULTS
+{
+	FILESYSTEM
+	{
+
+	} 
+	RAWDISK
+	{
+
+	} 
+}
+
+DEVICE "HP:Ultrium 5-SCSI_19" 
+{
+	-pool "idb"
+	-mp_preferred_host "cbbssys2"
+} 
+
+OMNIDB "[Database]: cbbssys2" cbbssys2:"/"
+{
+} 
+

@@ -1,0 +1,26 @@
+DATALIST "PSMS2_backup_manual1"
+DYNAMIC 1 5
+DEFAULTS
+{
+	FILESYSTEM
+	{
+
+	} 
+	RAWDISK
+	{
+
+	} 
+}
+
+DEVICE "HP:Ultrium 5-SCSI_21" 
+{
+	-pool "PSMS"
+	-mp_preferred_host "psms2"
+} 
+
+FILESYSTEM "/psms2_backup01" psms2:"/psms2_backup01"
+{
+	-trees
+		"/psms2_backup01/OBII_BACKUP_AUTO1"
+} 
+

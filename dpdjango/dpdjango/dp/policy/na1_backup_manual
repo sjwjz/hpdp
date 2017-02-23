@@ -1,0 +1,39 @@
+DATALIST "na1_backup_manual"
+DYNAMIC 1 1
+DEFAULTS
+{
+	FILESYSTEM
+	{
+
+	} 
+	RAWDISK
+	{
+
+	} 
+}
+
+DEVICE "QUANTUM:DLT8000_3_sm5" 
+{
+	-pool "NA1_DLT_MANU"
+} 
+
+DEVICE "QUANTUM:DLT8000_4_sm5" 
+{
+	-pool "NA1_DLT_MANU"
+} 
+
+FILESYSTEM "/cmcc_na/data01" na1:"/cmcc_na/data01"
+{
+	-trees
+		"/cmcc_na/data01/OBII_BACKUP_MANUAL"
+	-exclude
+		"/cmcc_na/data01/OBII_BACKUP_MANUAL/mv.sh"
+		"/cmcc_na/data01/OBII_BACKUP_MANUAL/xrst_email_xxxxxxxx_20050906"
+		"/cmcc_na/data01/OBII_BACKUP_MANUAL/xrst_iwlan_xxxxxxx_20050906"
+		"/cmcc_na/data01/OBII_BACKUP_MANUAL/xrst_kjava_xxxxxxxx_20050906"
+		"/cmcc_na/data01/OBII_BACKUP_MANUAL/xrst_os_xxxxxxxx_20050906"
+		"/cmcc_na/data01/OBII_BACKUP_MANUAL/xrst_rwlan_xxxxxxx_20050906"
+		"/cmcc_na/data01/OBII_BACKUP_MANUAL/xrst_wlan_xxxxxxxx_20050906"
+		"/cmcc_na/data01/OBII_BACKUP_MANUAL/xrst_rwlan_xxxxxxx_20050906.tar"
+} 
+

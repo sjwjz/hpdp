@@ -1,0 +1,33 @@
+DATALIST "na3_backup_auto"
+DYNAMIC 1 1
+POSTEXEC "rename_backup.sh" -on_host "na3"
+DEFAULTS
+{
+	FILESYSTEM
+	{
+
+	} 
+	RAWDISK
+	{
+
+	} 
+}
+
+DEVICE "HP:Ultrium 5-SCSI_19" 
+{
+	-pool "CBBSJS"
+	-mp_preferred_host "cbbssys2"
+} 
+
+FILESYSTEM "/cmcc_na3/data02" na3:"/cmcc_na3/data02"
+{
+	-trees
+		"/cmcc_na3/data02/OBII_BACKUP_AUTO"
+} 
+
+FILESYSTEM "/cmcc_na3/data01" na3:"/cmcc_na3/data01"
+{
+	-trees
+		"/cmcc_na3/data01/OBII_BACKUP_AUTO"
+} 
+

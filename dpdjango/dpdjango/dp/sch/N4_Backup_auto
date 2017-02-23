@@ -1,0 +1,23 @@
+-disabled
+
+
+-full 
+-starting 1 6 2008
+-every
+	-day -month Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec 
+	-at 04:15
+
+-full 
+-only 2009
+	-day 15 -month Jul 
+	-at 18:30
+
+-full 
+-exclude
+	-day 15 -month Jul -year 2009 
+	-at 04:15
+
+-full 
+-only 2009
+	-day 15 -month Jul 
+	-at 19:00

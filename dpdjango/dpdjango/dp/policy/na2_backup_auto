@@ -1,0 +1,20 @@
+DATALIST "na2_backup_auto"
+DYNAMIC 1 4
+POSTEXEC "backup_na2_auto" -on_host na2
+DEFAULTS
+{
+	FILESYSTEM
+	{
+
+	} 
+	RAWDISK
+	{
+
+	} 
+}
+
+DEVICE "A-04" 
+{
+	-pool "SM1_DLT_POOL"
+} 
+

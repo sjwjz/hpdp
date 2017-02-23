@@ -1,0 +1,35 @@
+
+-full 
+-every
+	-day Fri 
+	-at 02:00
+
+-full 
+-exclude
+	-day 27 -month Nov -year 2015 
+	-at 02:00
+
+-full 
+-only 2015
+	-day 27 -month Nov 
+	-at 05:00
+
+-full 
+-exclude
+	-day 25 -month Dec -year 2015 
+	-at 02:00
+
+-full 
+-only 2015
+	-day 25 -month Dec 
+	-at 10:15
+
+-full 
+-exclude
+	-day 25 -month Dec -year 2015 
+	-at 10:15
+
+-full 
+-only 2015
+	-day 25 -month Dec 
+	-at 10:45

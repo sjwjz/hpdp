@@ -1,0 +1,15 @@
+
+-full 
+-every
+	-day Thu 
+	-at 22:30
+
+-full 
+-exclude
+	-day 21 -month Jan -year 2016 
+	-at 22:30
+
+-full 
+-only 2016
+	-day 22 -month Jan 
+	-at 01:15

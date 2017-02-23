@@ -1,0 +1,26 @@
+DATALIST "na1_Backup_auto"
+DYNAMIC 1 1
+POSTEXEC "backup_na1_auto" -on_host na1
+DEFAULTS
+{
+	FILESYSTEM
+	{
+
+	} 
+	RAWDISK
+	{
+
+	} 
+}
+
+DEVICE "HP:Ultrium 3-SCSI_2_cbbssys2" 
+{
+	-pool "na1_LTO_pool"
+} 
+
+FILESYSTEM "" na1:"/cmcc_na/data01"
+{
+	-trees
+		"/cmcc_na/data01/OBII_BACKUP_AUTO"
+} 
+

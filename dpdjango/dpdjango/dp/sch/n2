@@ -1,0 +1,9 @@
+-full -protection -weeks 1 
+-every
+        -2day 
+        -at 00:00
+
+-incr 2 
+-every
+	-day Fri 
+	-at 04:00

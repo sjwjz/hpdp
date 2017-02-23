@@ -1,0 +1,31 @@
+DATALIST "omni configuration backup"
+DYNAMIC 1 5
+DEFAULTS
+{
+	FILESYSTEM
+	{
+
+	} 
+	RAWDISK
+	{
+
+	} 
+}
+
+DEVICE "HP:Ultrium 3-SCSI_3_cbbssys2" 
+{
+	-pool "omni_LTO_pool"
+} 
+
+FILESYSTEM "/etc/opt/omni" cbbssys2:"/etc/opt/omni"
+{
+} 
+
+FILESYSTEM "/opt/omni" cbbssys2:"/opt/omni"
+{
+} 
+
+FILESYSTEM "/var/opt/omni" cbbssys2:"/var/opt/omni"
+{
+} 
+

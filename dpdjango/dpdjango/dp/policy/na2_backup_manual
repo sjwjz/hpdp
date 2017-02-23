@@ -1,0 +1,19 @@
+DATALIST "na2_backup_manual"
+DYNAMIC 1 1
+DEFAULTS
+{
+	FILESYSTEM
+	{
+
+	} 
+	RAWDISK
+	{
+
+	} 
+}
+
+DEVICE "QUANTUM:DLT8000_2_sm5" 
+{
+	-pool "SM1_DLT_MANU"
+} 
+

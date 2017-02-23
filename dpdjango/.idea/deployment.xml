@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="PublishConfigData" serverName="www.sjwjz.top">
+    <serverData>
+      <paths name="www.sjwjz.top">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/work" local="$PROJECT_DIR$" web="/work" />
+          </mappings>
+        </serverdata>
+      </paths>
+    </serverData>
+  </component>
+</project>

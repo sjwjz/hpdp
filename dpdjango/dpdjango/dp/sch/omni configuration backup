@@ -1,0 +1,8 @@
+-disabled
+
+
+-full 
+-starting 1 6 2008
+-every
+	-day -month Jun Jul Aug Sep Oct Nov Dec Jan Feb Mar Apr May 
+	-at 05:00

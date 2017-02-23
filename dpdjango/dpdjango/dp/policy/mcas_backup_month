@@ -1,0 +1,12 @@
+DATALIST "mcas_backup_month"
+DEVICE "A-MCASAUTO" 
+{
+	-concurrency 4
+} 
+
+FILESYSTEM "" mc1:"/backup"
+{
+	-trees
+		"/backup/db_bak/mcas/usr_mode/OBII_BACKUP_AUTO"
+} 
+

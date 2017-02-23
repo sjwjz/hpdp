@@ -1,0 +1,17 @@
+-disabled
+
+
+-full 
+-every
+	-day 
+	-at 18:00
+
+-full 
+-exclude
+	-day 17 -month Dec -year 2013 
+	-at 18:00
+
+-full 
+-exclude
+	-day 18 -month Dec -year 2013 
+	-at 18:00

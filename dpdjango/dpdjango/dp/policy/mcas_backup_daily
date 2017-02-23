@@ -1,0 +1,34 @@
+DATALIST "mcas_backup_daily"
+DYNAMIC 1 1
+POSTEXEC "backup_mc1 " -on_host mc1
+DEFAULTS
+{
+	FILESYSTEM
+	{
+
+	} 
+	RAWDISK
+	{
+
+	} 
+}
+
+DEVICE "HP:Ultrium 3-SCSI_4_cbbssys2" 
+{
+	-pool "mcas_LTO_pool"
+} 
+
+FILESYSTEM "" mc1:"/backup"
+{
+	-trees
+		"/backup/sub/delay"
+		"/backup/sub/OBII_BACKUP_AUTO"
+		"/backup/us/delay"
+		"/backup/us/OBII_BACKUP_AUTO"
+		"/backup/db_bak/mcas/tab_mode/OBII_BACKUP_AUTO"
+		"/backup/sub/OBII_BACKUP_AUTO.tar"
+		"/backup/sub/delay.tar"
+		"/backup/us/OBII_BACKUP_AUTO.tar"
+		"/backup/us/delay.tar"
+} 
+

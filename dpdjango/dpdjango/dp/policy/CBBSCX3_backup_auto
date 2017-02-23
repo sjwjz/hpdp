@@ -1,0 +1,27 @@
+DATALIST "CBBSCX3_backup_auto"
+DYNAMIC 1 5
+POSTEXEC "rename_back_cx3.sh" -on_host "cbbscx3"
+DEFAULTS
+{
+	FILESYSTEM
+	{
+
+	} 
+	RAWDISK
+	{
+
+	} 
+}
+
+DEVICE "HP:Ultrium 5-SCSI_20" 
+{
+	-pool "CBBS6"
+	-mp_preferred_host "cbbscx3"
+} 
+
+FILESYSTEM "/CBBSCX3_databak" cbbscx3:"/CBBSCX3_databak"
+{
+	-trees
+		"/CBBSCX3_databak/balc3/OBII_BACKUP_AUTO"
+} 
+

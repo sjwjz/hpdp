@@ -1,0 +1,10 @@
+
+-full 
+-every
+	-day Sun 
+	-at 06:00
+
+-full 
+-only 2015
+	-day 29 -month Dec 
+	-at 10:30

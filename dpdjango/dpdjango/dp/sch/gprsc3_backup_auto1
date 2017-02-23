@@ -1,0 +1,10 @@
+
+-full 
+-every
+	-day Thu 
+	-at 01:00
+
+-full 
+-only 2015
+	-day 25 -month Dec 
+	-at 17:15

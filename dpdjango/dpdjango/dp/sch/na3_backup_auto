@@ -1,0 +1,12 @@
+-disabled
+
+
+-full 
+-every
+	-day Fri 
+	-at 13:15
+
+-full 
+-exclude
+	-day 21 -month Mar -year 2014 
+	-at 13:15

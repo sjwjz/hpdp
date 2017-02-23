@@ -1,0 +1,24 @@
+DATALIST "yym_test"
+DYNAMIC 1 5
+DEFAULTS
+{
+	FILESYSTEM
+	{
+
+	}  -protect none
+	RAWDISK
+	{
+
+	} 
+}
+
+DEVICE "HP:Ultrium 5-SCSI_15" 
+{
+	-pool "idb"
+	-mp_preferred_host "gprs1"
+} 
+
+FILESYSTEM "/tmp" gprs1:"/tmp"
+{
+} 
+

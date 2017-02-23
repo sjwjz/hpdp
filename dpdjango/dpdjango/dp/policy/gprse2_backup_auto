@@ -1,0 +1,27 @@
+DATALIST "gprse2_backup_auto"
+DYNAMIC 1 5
+POSTEXEC "rename_backup.sh" -on_host "gprse2"
+DEFAULTS
+{
+	FILESYSTEM
+	{
+
+	} 
+	RAWDISK
+	{
+
+	} 
+}
+
+DEVICE "HP:Ultrium 5-SCSI_24" 
+{
+	-pool "gprs"
+	-mp_preferred_host "gprse2"
+} 
+
+FILESYSTEM "/cbbs_gprse2/data_backup1" gprse2:"/cbbs_gprse2/data_backup1"
+{
+	-trees
+		"/cbbs_gprse2/data_backup1/OBII_BACKUP_AUTO"
+} 
+

@@ -1,0 +1,27 @@
+DATALIST "wlwjs7_backup_auto"
+DYNAMIC 1 5
+POSTEXEC "rename_backup.sh" -on_host "wlwjs7"
+DEFAULTS
+{
+	FILESYSTEM
+	{
+
+	} 
+	RAWDISK
+	{
+
+	} 
+}
+
+DEVICE "HP:Ultrium 5-SCSI_19" 
+{
+	-pool "wlw"
+	-mp_preferred_host "cbbssys2"
+} 
+
+FILESYSTEM "/pboss_js7/backup01" wlwjs7:"/pboss_js7/backup01"
+{
+	-trees
+		"/pboss_js7/backup01/OBII_BACKUP_AUTO"
+} 
+

@@ -1,0 +1,28 @@
+DATALIST "PSMS2_backup_auto"
+DYNAMIC 1 5
+POSTEXEC "rename_backup1.sh" -on_host "psms2"
+DEFAULTS
+{
+	FILESYSTEM
+	{
+
+	} 
+	RAWDISK
+	{
+
+	} 
+}
+
+DEVICE "HP:Ultrium 5-SCSI_20" 
+{
+	-pool "PSMS"
+	-mp_preferred_host "cbbssys2"
+} 
+
+FILESYSTEM "/psms_js/balance/data_backup01" psms2:"/psms_js/balance/data_backup01"
+{
+	-trees
+		"/psms_js/balance/data_backup01/OBII_BACKUP_AUTO"
+	-no_storedrim
+}  -keepcatalog same_as_dataprotection
+

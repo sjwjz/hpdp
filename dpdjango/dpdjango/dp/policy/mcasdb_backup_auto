@@ -1,0 +1,26 @@
+DATALIST "mcasdb_backup_auto"
+DYNAMIC 1 5
+DEFAULTS
+{
+	FILESYSTEM
+	{
+
+	} 
+	RAWDISK
+	{
+
+	} 
+}
+
+DEVICE "HP:Ultrium 5-SCSI_18" 
+{
+	-pool "UDMSDB"
+	-mp_preferred_host "cbbssys2"
+} 
+
+FILESYSTEM "/oracle/app/oracle/arch_log2" udmsdb2:"/oracle/app/oracle/arch_log2"
+{
+	-trees
+		"/oracle/app/oracle/arch_log2/EXPDATA/OBII_BACKUP_AUTO"
+} 
+

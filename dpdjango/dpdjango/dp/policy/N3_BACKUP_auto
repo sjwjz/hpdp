@@ -1,0 +1,41 @@
+DATALIST "N3_BACKUP_auto"
+DYNAMIC 1 2
+POSTEXEC "backupn3" -on_host n3
+DEFAULTS
+{
+	FILESYSTEM
+	{
+
+	} 
+	RAWDISK
+	{
+
+	} 
+}
+
+DEVICE "HP:Ultrium 4-SCSI_12" 
+{
+	-pool "N3_ESL_AUTO"
+	-mp_preferred_host "cbbssys2"
+} 
+
+FILESYSTEM "/data01" n3:"/data01"
+{
+	-trees
+		"/data01/inbpps/bin"
+		"/data01/inbpps/config"
+		"/data01/inbpps/data/xarchive"
+		"/data01/inbpps/data/chkdup_lib_pps"
+		"/data01/inbpps/data/omniback"
+		"/data01/inbvc/bin"
+		"/data01/inbvc/config"
+		"/data01/inbvc/data/xarchive"
+		"/data01/inbvc/data/chkdup_lib_vc"
+		"/data01/inbvc/data/omniback"
+		"/data01/inbvpmn/bin"
+		"/data01/inbvpmn/config"
+		"/data01/inbvpmn/data/xarchive"
+		"/data01/inbvpmn/data/chkdup_lib_vpmn"
+		"/data01/inbvpmn/data/omniback"
+} 
+

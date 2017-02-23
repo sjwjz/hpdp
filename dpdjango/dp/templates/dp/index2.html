@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>dp管理平台</title>
+	<meta charset="utf-8">
+</head>
+<body>
+<table border="1">
+	<tr>
+		<th>序号</th>
+		<th>备份任务</th>
+		<th>client</th>
+		<th>备份目录</th>
+		<th>使用磁带机</th>
+		<th>da</th>
+		<th>备份脚本</th>
+	</tr>
+	{% for bk_task,bk in policy.items %}
+		<tr>
+			<td>{{ bk_task }}</td>
+			{ % for key,value in bk %}
+			<td>{{ value }}</td>
+			{ % endfor % }
+		
+
+		</tr>
+	{% endfor %}
+	
+</table>
+
+</body>
+</html>

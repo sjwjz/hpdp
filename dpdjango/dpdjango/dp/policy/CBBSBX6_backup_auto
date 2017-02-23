@@ -1,0 +1,51 @@
+DATALIST "CBBSBX6_backup_auto"
+DYNAMIC 1 5
+POSTEXEC "rename_back_bx6.sh" -on_host "cbbsbx6"
+DEFAULTS
+{
+	FILESYSTEM
+	{
+
+	} 
+	RAWDISK
+	{
+
+	} 
+}
+
+DEVICE "HP:Ultrium 5-SCSI_18" 
+{
+	-pool "CBBS6"
+	-mp_preferred_host "cbbsbx6"
+} 
+
+DEVICE "HP:Ultrium 5-SCSI_17" 
+{
+	-pool "CBBS5"
+	-mp_preferred_host "cbbsbx6"
+} 
+
+FILESYSTEM "/CBBSBX6_databak" cbbsbx6:"/CBBSBX6_databak"
+{
+	-trees
+		"/CBBSBX6_databak/balb6/OBII_BACKUP_AUTO"
+		"/CBBSBX6_databak/balb5/OBII_BACKUP_AUTO"
+		"/CBBSBX6_databak/balb4/OBII_BACKUP_AUTO"
+	-exclude
+    "/cmcc_na/data01/OBII_BACKUP_MANUAL/mv.sh"
+    "/cmcc_na/data01/OBII_BACKUP_MANUAL/xrst_email_xxxxxxxx_20050906"
+    "/cmcc_na/data01/OBII_BACKUP_MANUAL/xrst_iwlan_xxxxxxx_20050906"
+} 
+
+FILESYSTEM "/CBBSBX3_databak" cbbsbx6:"/CBBSBX6_databak"
+{
+	-trees
+		"/CBBSBX3_databak/balb6/OBII_BACKUP_AUTO"
+		"/CBBSBX3_databak/balb5/OBII_BACKUP_AUTO"
+		"/CBBSBX3_databak/balb4/OBII_BACKUP_AUTO"
+	-exclude
+    "/cmcc_na/data02/OBII_BACKUP_MANUAL/mv.sh"
+    "/cmcc_na/data02/OBII_BACKUP_MANUAL/xrst_email_xxxxxxxx_20050906"
+    "/cmcc_na/data02/OBII_BACKUP_MANUAL/xrst_iwlan_xxxxxxx_20050906"      
+    "/cmcc_na/data01/OBII_BACKUP_MANUAL/xrst_iwlan_x6"
+} 

@@ -1,0 +1,33 @@
+DATALIST "UDMS1_backup_manual"
+DYNAMIC 1 5
+POSTEXEC "rename_backup.sh" -on_host "udms1"
+DEFAULTS
+{
+	FILESYSTEM
+	{
+
+	} 
+	RAWDISK
+	{
+
+	} 
+}
+
+DEVICE "HP:Ultrium 5-SCSI_14" 
+{
+	-pool "UDMSDB"
+	-mp_preferred_host "cbbssys2"
+} 
+
+FILESYSTEM "/mdb2" udms1:"/mdb2"
+{
+	-trees
+		"/mdb2/GPRSA4_BAK"
+} 
+
+FILESYSTEM "/mdb1" udms1:"/mdb1"
+{
+	-trees
+		"/mdb1/GPRSA4_BAK"
+} 
+

@@ -1,0 +1,30 @@
+DATALIST "CBBSBX2_backup_auto"
+DYNAMIC 1 5
+POSTEXEC "rename_back_bx2.sh" -on_host "cbbsbx2"
+DEFAULTS
+{
+	FILESYSTEM
+	{
+
+	} 
+	RAWDISK
+	{
+
+	} 
+}
+
+DEVICE "HP:Ultrium 5-SCSI_16" 
+{
+	-pool "CBBS6"
+	-mp_preferred_host "cbbsbx2"
+} 
+
+FILESYSTEM "/CBBSBX2_databak" cbbsbx2:"/CBBSBX2_databak"
+{
+	-trees
+		"/CBBSBX2_databak/balb2"
+	-exclude
+		"/CBBSBX2_databak/balb2/xarchive"
+		"/CBBSBX2_databak/balb2/OFFLINE_BACKUP_DATA"
+} 
+

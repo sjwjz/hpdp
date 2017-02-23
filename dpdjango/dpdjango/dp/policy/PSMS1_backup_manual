@@ -1,0 +1,26 @@
+DATALIST "PSMS1_backup_manual"
+DYNAMIC 1 5
+DEFAULTS
+{
+	FILESYSTEM
+	{
+
+	} 
+	RAWDISK
+	{
+
+	} 
+}
+
+DEVICE "HP:Ultrium 5-SCSI_23" 
+{
+	-pool "PSMS"
+	-mp_preferred_host "cbbssys2"
+} 
+
+FILESYSTEM "/psms1_backup01" psms1:"/psms1_backup01"
+{
+	-trees
+		"/psms1_backup01/OBII_BACKUP_AUTO"
+} 
+

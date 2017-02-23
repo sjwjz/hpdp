@@ -1,0 +1,27 @@
+DATALIST "PSMS1_backup_auto"
+DYNAMIC 1 5
+POSTEXEC "rename_backup1.sh" -on_host "psms1"
+DEFAULTS
+{
+	FILESYSTEM
+	{
+
+	} 
+	RAWDISK
+	{
+
+	} 
+}
+
+DEVICE "HP:Ultrium 5-SCSI_21" 
+{
+	-pool "PSMS"
+	-mp_preferred_host "cbbssys2"
+} 
+
+FILESYSTEM "/psms1_backup01" psms1:"/psms1_backup01"
+{
+	-trees
+		"/psms1_backup01/OBII_BACKUP_AUTO"
+} 
+

@@ -1,0 +1,26 @@
+DATALIST "wlwjfa1_backup_auto"
+DYNAMIC 1 5
+DEFAULTS
+{
+	FILESYSTEM
+	{
+
+	} 
+	RAWDISK
+	{
+
+	} 
+}
+
+DEVICE "HP:Ultrium 5-SCSI_21" 
+{
+	-pool "wlw"
+	-mp_preferred_host "cbbssys2"
+} 
+
+FILESYSTEM "/pboss_jfa1/backup" wlwjfa1:"/pboss_jfa1/backup"
+{
+	-trees
+		"/pboss_jfa1/backup/OBII_BAKCUP_AUTO"
+} 
+

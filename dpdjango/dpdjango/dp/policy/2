@@ -1,0 +1,28 @@
+DATALIST "2"
+DYNAMIC 1 5
+DEFAULTS
+{
+	FILESYSTEM
+	{
+
+	} 
+	RAWDISK
+	{
+
+	} 
+}
+
+DEVICE "HP:Ultrium 3-SCSI_3" 
+{
+	-pool "CBBSJS1_ESL_AUTO"
+	-mp_preferred_host "cbbsjs1"
+} 
+
+FILESYSTEM "/cbbs_js2/balance/data02" cbbsjs2:"/cbbs_js2/balance/data02"
+{
+	-trees
+		"/cbbs_js2/balance/data02/OBII_BACKUP_AUTO_20110826bak"
+		"/cbbs_js2/balance/data02/OBII_BACKUP_AUTO_20110812bak"
+		"/cbbs_js2/balance/data02/OBII_BACKUP_AUTO_20110614bak"
+} 
+

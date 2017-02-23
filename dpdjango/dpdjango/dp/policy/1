@@ -1,0 +1,26 @@
+DATALIST "1"
+DYNAMIC 1 5
+DEFAULTS
+{
+	FILESYSTEM
+	{
+
+	} 
+	RAWDISK
+	{
+
+	} 
+}
+
+DEVICE "HP:Ultrium 5-SCSI_21" 
+{
+	-pool "provisional"
+	-mp_preferred_host "cbbssys2"
+} 
+
+FILESYSTEM "/opt" cbbssys2:"/opt"
+{
+	-trees
+		"/opt/omni/newconfig"
+} 
+

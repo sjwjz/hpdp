@@ -1,0 +1,4 @@
+-full -protection -weeks 1
+-every
+        -2day Tue
+        -at 23:45

@@ -1,0 +1,27 @@
+DATALIST "WLWJFX3_backup_auto"
+DYNAMIC 1 5
+POSTEXEC "rename_back.sh" -on_host "wlwjfx3"
+DEFAULTS
+{
+	FILESYSTEM
+	{
+
+	} 
+	RAWDISK
+	{
+
+	} 
+}
+
+DEVICE "HP:Ultrium 5-SCSI_15" 
+{
+	-pool "wlw"
+	-mp_preferred_host "wlwjfx3"
+} 
+
+FILESYSTEM "/WLWJFX3_databak" wlwjfx3:"/WLWJFX3_databak"
+{
+	-trees
+		"/WLWJFX3_databak/OBII_BACKUP_AUTO"
+} 
+
